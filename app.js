@@ -4,8 +4,7 @@ var port = process.env.PORT || 8080;
 
 var cors_proxy = require('cors-anywhere');
 cors_proxy.createServer({
-    originWhitelist: ['https://daveroda.com',
-      'https://www.daveroda.com', 'http://127.0.0.1'], // Allow all origins
+    originWhitelist: [],
     requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, function() {
